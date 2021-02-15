@@ -1,0 +1,8 @@
+main: com.github.sheche.ShowCommandPlugin
+name: ShowCommand
+author: JUNHYEOK__
+version: 1.0
+api-version: '1.16'
+commands:
+  sc:
+    usage: /<command>
