@@ -20,21 +20,6 @@ class ShowCommandPlugin: JavaPlugin() {
         logger.info("${ChatColor.GREEN}Enabled.")
         server.getPluginCommand(cmdName)!!.setExecutor(this)
         Bukkit.getScheduler().runTaskTimer(this, ShowCommand(), 0L, 0L)
-        load()
-    }
-
-    override fun onDisable() {
-        save()
-    }
-
-    private val yaml:YamlConfiguration = YamlConfiguration()
-
-    private fun save() {
-        yaml.set("NAME", playerList)
-    }
-
-    private fun load() {
-        yaml.get("NAME", playerList)
     }
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
